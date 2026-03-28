@@ -1,0 +1,131 @@
+:where(*, *::before, *::after) {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: "Segoe UI", "Trebuchet MS", "Tahoma", sans-serif;
+    line-height: 1.45;
+    color: #1a2438;
+    background:
+        radial-gradient(1000px 440px at -10% -20%, #dbe8ff 0, transparent 60%),
+        radial-gradient(760px 360px at 120% 10%, #d5ede7 0, transparent 60%),
+        #f3f7fc;
+}
+
+.page-wrap {
+    width: min(470px, 100%);
+}
+
+.card {
+    position: relative;
+    border: 1px solid #d7e0ee;
+    border-radius: 18px;
+    padding: 28px;
+    background: #ffffff;
+    box-shadow: 0 18px 44px rgba(18, 32, 59, 0.12);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    border-radius: 18px 18px 0 0;
+    background: linear-gradient(90deg, #1454bd, #2f73d9);
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 1.9rem);
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    margin-top: 8px;
+    margin-bottom: 18px;
+    color: #5d6a82;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #2a3750;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    font: inherit;
+}
+
+input,
+select {
+    border: 1px solid #d7e0ee;
+    border-radius: 14px;
+    padding: 11px 12px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+input::placeholder {
+    color: #8a95a9;
+}
+
+input:focus-visible,
+select:focus-visible {
+    border-color: #7ea3e8;
+    box-shadow: 0 0 0 4px rgba(20, 84, 189, 0.16);
+}
+
+button {
+    margin-top: 16px;
+    border: 0;
+    border-radius: 14px;
+    padding: 11px 14px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #1454bd, #2f6ed5);
+    cursor: pointer;
+    transition: transform 0.15s, filter 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.96);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(20, 84, 189, 0.16);
+    outline-offset: 2px;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+.login-hint {
+    margin-top: 16px;
+    padding: 11px 12px;
+    border: 1px dashed #c8d5ea;
+    border-radius: 12px;
+    background: #f8fbff;
+    color: #5d6a82;
+    font-size: 0.84rem;
+    display: grid;
+    gap: 4px;
+}

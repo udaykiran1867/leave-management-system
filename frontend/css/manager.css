@@ -1,0 +1,255 @@
+:where(*, *::before, *::after) {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:  sans-serif;
+    line-height: 1.45;
+    color: #1c283d;
+    background:
+        radial-gradient(980px 480px at -10% -20%, #dbe9ff 0, transparent 60%),
+        radial-gradient(820px 390px at 110% 0, #e1f3e8 0, transparent 60%),
+        #f2f6fc;
+}
+
+.page-wrap {
+    width: min(1140px, 94vw);
+    margin: 24px auto 36px;
+    display: grid;
+    gap: 12px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #d8e1ef;
+    border-radius: 14px;
+    padding: 16px 17px;
+    box-shadow: 0 10px 26px rgba(21, 36, 62, 0.06);
+}
+
+h1,h2,h3,p {
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+input,textarea,button {
+    font: inherit;
+}
+
+input,textarea {
+    width: 100%;
+    border: 1px solid #d8e1ef;
+    border-radius: 12px;
+    padding: 9px 11px;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,textarea::placeholder {
+    color: #8a95a9;
+}
+
+input:focus-visible,textarea:focus-visible {
+    border-color: #7ca2e8;
+    box-shadow: 0 0 0 4px rgba(17, 90, 195, 0.14);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    border: 0;
+    border-radius: 12px;
+    padding: 8px 12px;
+    color: #fff;
+    background: linear-gradient(135deg, #115ac3, #2e73d7);
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s, filter 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.96);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(17, 90, 195, 0.2);
+    outline-offset: 2px;
+}
+
+button.secondary {
+    background: #e8f0ff;
+    color: #1d4d9e;
+}
+
+button.secondary:hover {
+    background: #d8e7ff;
+}
+
+button.danger {
+    background: #c63f3f;
+}
+
+button.danger:hover {
+    background: #aa3131;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #60718c;
+    font-weight: 600;
+}
+
+.request-list {
+    display: grid;
+    gap: 10px;
+}
+
+.request-card {
+    border: 1px solid #d8e1ef;
+    border-radius: 12px;
+    padding: 12px;
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+    display: grid;
+    gap: 7px;
+}
+
+.request-card p {
+    color: #2c3750;
+    line-height: 1.35;
+}
+
+.request-card strong {
+    color: #1a2c49;
+}
+
+.action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-bottom: 1px solid #d8e1ef;
+    text-align: left;
+    padding: 9px 8px;
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #f7faff;
+    color: #60718c;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background: #fbfdff;
+}
+
+tbody tr:hover {
+    background: #f2f7ff;
+}
+
+.status-pill {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.status-pending {
+    background: #fff4d6;
+    color: #986a00;
+}
+
+.status-approved {
+    background: #dff7ec;
+    color: #117650;
+}
+
+.status-rejected {
+    background: #ffe6e6;
+    color: #b43d3d;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+}
+
+.calendar-cell {
+    min-height: 96px;
+    padding: 8px;
+    border: 1px solid #d8e1ef;
+    border-radius: 12px;
+    background: #fbfdff;
+}
+
+.day-tag {
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.calendar-badge {
+    width: fit-content;
+    padding: 3px 8px;
+    margin-bottom: 4px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: #154e9e;
+    background: #e6f0ff;
+}
+
+.empty-message {
+    color: #60718c;
+}

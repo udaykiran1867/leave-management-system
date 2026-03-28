@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+<body>
+    <div class="page-wrap">
+        <header class="topbar">
+            <h1>Employee Dashboard</h1>
+            <div class="topbar-actions">
+                <span id="employeeName"></span>
+                <button class="secondary" onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <section class="card">
+            <h2>Leave Balances</h2>
+            <div class="balance-grid">
+                <div class="balance-item">
+                    <p>Vacation</p>
+                    <strong id="vacationBalance">0</strong>
+                </div>
+                <div class="balance-item">
+                    <p>Sick</p>
+                    <strong id="sickBalance">0</strong>
+                </div>
+                <div class="balance-item">
+                    <p>Personal</p>
+                    <strong id="personalBalance">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Submit Leave Request</h2>
+            <div class="form-grid">
+                <div>
+                    <label for="leaveType">Leave Type</label>
+                    <select id="leaveType">
+                        <option value="vacation">Vacation</option>
+                        <option value="sick">Sick Leave</option>
+                        <option value="other">Other Leave</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fromDate">Start Date</label>
+                    <input type="date" id="fromDate">
+                </div>
+                <div>
+                    <label for="toDate">End Date</label>
+                    <input type="date" id="toDate">
+                </div>
+                <div class="full-width">
+                    <label for="reason">Reason</label>
+                    <textarea id="reason" rows="3" placeholder="Reason for leave"></textarea>
+                </div>
+            </div>
+            <button id="applyButton" onclick="applyLeave()">Submit Request</button>
+        </section>
+
+        <section class="card">
+            <h2>My Requests</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Status</th>
+                            <th>Manager Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaveList"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="calendar-header">
+                <h2>Team Leave Calendar</h2>
+                <input type="month" id="employeeCalendarMonth">
+            </div>
+            <div id="employeeCalendar" class="calendar-grid"></div>
+        </section>
+    </div>
+    <script src="../js/employee.js"></script>
+</body>
+</html>

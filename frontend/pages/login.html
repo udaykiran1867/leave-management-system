@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="card auth-card">
+            <h1>Employee Leave Management</h1>
+            <p class="subtitle">Sign in as employee or manager</p>
+
+            <label for="role">Login As</label>
+            <select id="role">
+                <option value="">Select role</option>
+                <option value="employee">Employee</option>
+                <option value="manager">Manager</option>
+            </select>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="name@company.com">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button id="loginButton" onclick="login()">Login</button>
+
+            <div class="login-hint">
+                <p>Manager demo: manager@gmail.com / 123</p>
+                <p>Employee demo: uday@gmail.com / 123</p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
